@@ -1,31 +1,64 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BuyLowSellHigh.Models
+﻿namespace BuyLowSellHigh.Models
 {
     internal class Result
     {
-        int lowDay { get; set; }
+        /// <summary>
+        /// Gets or sets the low day.
+        /// </summary>
+        /// <value>
+        /// The low day.
+        /// </value>
+        int LowDay { get; set; }
 
-        double low { get; set; }
+        /// <summary
+        /// >Gets or sets the low value.
+        /// </summary>
+        /// <value>
+        /// The low value.
+        /// </value>
+        double Low { get; set; }
 
-        int highDay { get; set; }
+        /// <summary>
+        /// Gets or sets the high day.
+        /// </summary>
+        /// <value>
+        /// The high day.
+        /// </value>
+        int HighDay { get; set; }
 
-        double high { get; set; }
+        /// <summary>
+        /// Gets or sets the high calue.
+        /// </summary>
+        /// <value>
+        /// The high.
+        /// </value>
+        double High { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Result"/> class.
+        /// </summary>
+        /// <param name="lowDay">The low day.</param>
+        /// <param name="low">The low.</param>
+        /// <param name="highDay">The high day.</param>
+        /// <param name="high">The high.</param>
         public Result(int lowDay, double low, int highDay, double high)
         {
-            this.lowDay = lowDay;
-            this.low = low;
-            this.highDay = highDay;
-            this.high = high;
+            this.LowDay = lowDay;
+            this.Low = low;
+            this.HighDay = highDay;
+            this.High = high;
 
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String"/> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String"/> that represents this instance.
+        /// </returns>
         public override string ToString()
         {
-            return string.Format("{0}({1}), {2}({3})", this.lowDay, this.low, this.highDay, this.high);
+            return string.Format("{0}({1}), {2}({3})", this.LowDay, this.Low, this.HighDay, this.High);
         }
     }
 }

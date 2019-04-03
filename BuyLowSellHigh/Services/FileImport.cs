@@ -7,10 +7,15 @@ namespace BuyLowSellHigh
 {
     internal class FileImport : IFileImport
     {
-        public List<double> getData()
+        public List<double> GetData()
         {
-            Console.Write("Enter File Path: ");
+            Console.Write("Enter File Path or type q to quit: ");
             var filePath = Console.ReadLine();
+
+            if( filePath == "q")
+            {
+                Environment.Exit(0);
+            }
 
             if (File.Exists(filePath))
             {
@@ -32,7 +37,7 @@ namespace BuyLowSellHigh
             else
             {
                 Console.WriteLine("File does not exist - Please check and try again.");
-                this.getData();
+                this.GetData();
 
                 return null;
             }
